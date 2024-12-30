@@ -13,12 +13,10 @@ app.post("/webhook", (req, res) => {
   // Log the data for debugging
   console.log("Webhook received:", webhookData);
 
-  // Example: Respond back to Jira
+  // Respond back to Jira
   res.status(200).json({
     message: "Webhook received successfully",
   });
-
-  // Additional processing logic can be added here
 });
 
 module.exports.handler = serverless(app);
